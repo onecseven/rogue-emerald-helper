@@ -1,0 +1,486 @@
+{
+  "trainer": {
+    "party": [
+      {
+        "name": "Marowak",
+        "species": "Marowak",
+        "isBattling": "true",
+        "id": 105,
+        "moves": [
+          {
+            "name": "thrash",
+            "types": "normal"
+          },
+          {
+            "name": "bonemerang",
+            "types": "ground"
+          },
+          {
+            "name": "rage",
+            "types": "normal"
+          },
+          {
+            "name": "false-swipe",
+            "types": "normal"
+          }
+        ],
+        "types": [
+          {
+            "name": "ground",
+            "double_damage_from": [
+              "water",
+              "grass",
+              "ice"
+            ],
+            "double_damage_to": [
+              "poison",
+              "rock",
+              "steel",
+              "fire",
+              "electric"
+            ],
+            "half_damage_from": [
+              "poison",
+              "rock"
+            ],
+            "half_damage_to": [
+              "bug",
+              "grass"
+            ],
+            "no_damage_from": [
+              "electric"
+            ],
+            "no_damage_to": [
+              "flying"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Schism",
+        "species": "Scyther",
+        "isBattling": "false",
+        "id": 123,
+        "moves": [
+          {
+            "name": "vacuum-wave",
+            "types": "fighting"
+          },
+          {
+            "name": "night-slash",
+            "types": "dark"
+          },
+          {
+            "name": "x-scissor",
+            "types": "bug"
+          },
+          {
+            "name": "wing-attack",
+            "types": "flying"
+          }
+        ],
+        "types": [
+          {
+            "name": "bug",
+            "double_damage_from": [
+              "flying",
+              "rock",
+              "fire"
+            ],
+            "double_damage_to": [
+              "grass",
+              "psychic",
+              "dark"
+            ],
+            "half_damage_from": [
+              "fighting",
+              "ground",
+              "grass"
+            ],
+            "half_damage_to": [
+              "fighting",
+              "flying",
+              "poison",
+              "ghost",
+              "steel",
+              "fire",
+              "fairy"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": []
+          },
+          {
+            "name": "flying",
+            "double_damage_from": [
+              "rock",
+              "electric",
+              "ice"
+            ],
+            "double_damage_to": [
+              "fighting",
+              "bug",
+              "grass"
+            ],
+            "half_damage_from": [
+              "fighting",
+              "bug",
+              "grass"
+            ],
+            "half_damage_to": [
+              "rock",
+              "steel",
+              "electric"
+            ],
+            "no_damage_from": [
+              "ground"
+            ],
+            "no_damage_to": []
+          }
+        ]
+      },
+      {
+        "name": "Pupitar",
+        "species": "Pupitar",
+        "isBattling": "false",
+        "id": 247,
+        "moves": [
+          {
+            "name": "bite",
+            "types": "dark"
+          },
+          {
+            "name": "rock-slide",
+            "types": "rock"
+          },
+          {
+            "name": "sandstorm",
+            "types": "rock"
+          },
+          {
+            "name": "chip-away",
+            "types": "normal"
+          }
+        ],
+        "types": [
+          {
+            "name": "rock",
+            "double_damage_from": [
+              "fighting",
+              "ground",
+              "steel",
+              "water",
+              "grass"
+            ],
+            "double_damage_to": [
+              "flying",
+              "bug",
+              "fire",
+              "ice"
+            ],
+            "half_damage_from": [
+              "normal",
+              "flying",
+              "poison",
+              "fire"
+            ],
+            "half_damage_to": [
+              "fighting",
+              "ground",
+              "steel"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": []
+          },
+          {
+            "name": "ground",
+            "double_damage_from": [
+              "water",
+              "grass",
+              "ice"
+            ],
+            "double_damage_to": [
+              "poison",
+              "rock",
+              "steel",
+              "fire",
+              "electric"
+            ],
+            "half_damage_from": [
+              "poison",
+              "rock"
+            ],
+            "half_damage_to": [
+              "bug",
+              "grass"
+            ],
+            "no_damage_from": [
+              "electric"
+            ],
+            "no_damage_to": [
+              "flying"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Snorlax",
+        "species": "Snorlax",
+        "isBattling": "false",
+        "id": 143,
+        "moves": [
+          {
+            "name": "body-slam",
+            "types": "normal"
+          },
+          {
+            "name": "yawn",
+            "types": "normal"
+          },
+          {
+            "name": "sleep-talk",
+            "types": "normal"
+          },
+          {
+            "name": "rest",
+            "types": "psychic"
+          }
+        ],
+        "types": [
+          {
+            "name": "normal",
+            "double_damage_from": [
+              "fighting"
+            ],
+            "double_damage_to": [],
+            "half_damage_from": [],
+            "half_damage_to": [
+              "rock",
+              "steel"
+            ],
+            "no_damage_from": [
+              "ghost"
+            ],
+            "no_damage_to": [
+              "ghost"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lapras",
+        "species": "Lapras",
+        "isBattling": "false",
+        "id": 131,
+        "moves": [
+          {
+            "name": "rain-dance",
+            "types": "water"
+          },
+          {
+            "name": "body-slam",
+            "types": "normal"
+          },
+          {
+            "name": "brine",
+            "types": "water"
+          },
+          {
+            "name": "ice-beam",
+            "types": "ice"
+          }
+        ],
+        "types": [
+          {
+            "name": "water",
+            "double_damage_from": [
+              "grass",
+              "electric"
+            ],
+            "double_damage_to": [
+              "ground",
+              "rock",
+              "fire"
+            ],
+            "half_damage_from": [
+              "steel",
+              "fire",
+              "water",
+              "ice"
+            ],
+            "half_damage_to": [
+              "water",
+              "grass",
+              "dragon"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": []
+          },
+          {
+            "name": "ice",
+            "double_damage_from": [
+              "fighting",
+              "rock",
+              "steel",
+              "fire"
+            ],
+            "double_damage_to": [
+              "flying",
+              "ground",
+              "grass",
+              "dragon"
+            ],
+            "half_damage_from": [
+              "ice"
+            ],
+            "half_damage_to": [
+              "steel",
+              "fire",
+              "water",
+              "ice"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": []
+          }
+        ]
+      },
+      {
+        "name": "Ampharos",
+        "species": "Ampharos",
+        "isBattling": "false",
+        "id": 181,
+        "moves": [
+          {
+            "name": "power-gem",
+            "types": "rock"
+          },
+          {
+            "name": "dragon-pulse",
+            "types": "dragon"
+          },
+          {
+            "name": "discharge",
+            "types": "electric"
+          },
+          {
+            "name": "thunder-punch",
+            "types": "electric"
+          }
+        ],
+        "types": [
+          {
+            "name": "electric",
+            "double_damage_from": [
+              "ground"
+            ],
+            "double_damage_to": [
+              "flying",
+              "water"
+            ],
+            "half_damage_from": [
+              "flying",
+              "steel",
+              "electric"
+            ],
+            "half_damage_to": [
+              "grass",
+              "electric",
+              "dragon"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": [
+              "ground"
+            ]
+          }
+        ]
+      }
+    ],
+    "battling": "Marowak"
+  },
+  "opp": {
+    "party": [
+      {
+        "name": "Ninjask",
+        "species": "Ninjask",
+        "isBattling": "true",
+        "id": 291,
+        "moves": [
+          {
+            "name": "agility",
+            "types": "psychic"
+          },
+          {
+            "name": "slash",
+            "types": "normal"
+          },
+          {
+            "name": "mind-reader",
+            "types": "normal"
+          },
+          {
+            "name": "baton-pass",
+            "types": "normal"
+          }
+        ],
+        "types": [
+          {
+            "name": "bug",
+            "double_damage_from": [
+              "flying",
+              "rock",
+              "fire"
+            ],
+            "double_damage_to": [
+              "grass",
+              "psychic",
+              "dark"
+            ],
+            "half_damage_from": [
+              "fighting",
+              "ground",
+              "grass"
+            ],
+            "half_damage_to": [
+              "fighting",
+              "flying",
+              "poison",
+              "ghost",
+              "steel",
+              "fire",
+              "fairy"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": []
+          },
+          {
+            "name": "flying",
+            "double_damage_from": [
+              "rock",
+              "electric",
+              "ice"
+            ],
+            "double_damage_to": [
+              "fighting",
+              "bug",
+              "grass"
+            ],
+            "half_damage_from": [
+              "fighting",
+              "bug",
+              "grass"
+            ],
+            "half_damage_to": [
+              "rock",
+              "steel",
+              "electric"
+            ],
+            "no_damage_from": [
+              "ground"
+            ],
+            "no_damage_to": []
+          }
+        ]
+      }
+    ],
+    "battling": "Ninjask"
+  }
+}
