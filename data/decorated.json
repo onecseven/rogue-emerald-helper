@@ -2,304 +2,26 @@
   "trainer": {
     "party": [
       {
-        "name": "Schism",
-        "species": "Scyther",
-        "isBattling": "false",
-        "id": 123,
-        "moves": [
-          {
-            "name": "vacuum wave"
-          },
-          {
-            "name": "quick attack"
-          },
-          {
-            "name": "wing attack"
-          },
-          {
-            "name": "pursuit",
-            "type": "dark"
-          }
-        ],
-        "types": [
-          {
-            "name": "bug",
-            "double_damage_from": [
-              "flying",
-              "rock",
-              "fire"
-            ],
-            "double_damage_to": [
-              "grass",
-              "psychic",
-              "dark"
-            ],
-            "half_damage_from": [
-              "fighting",
-              "ground",
-              "grass"
-            ],
-            "half_damage_to": [
-              "fighting",
-              "flying",
-              "poison",
-              "ghost",
-              "steel",
-              "fire",
-              "fairy"
-            ],
-            "no_damage_from": [],
-            "no_damage_to": []
-          },
-          {
-            "name": "flying",
-            "double_damage_from": [
-              "rock",
-              "electric",
-              "ice"
-            ],
-            "double_damage_to": [
-              "fighting",
-              "bug",
-              "grass"
-            ],
-            "half_damage_from": [
-              "fighting",
-              "bug",
-              "grass"
-            ],
-            "half_damage_to": [
-              "rock",
-              "steel",
-              "electric"
-            ],
-            "no_damage_from": [
-              "ground"
-            ],
-            "no_damage_to": []
-          }
-        ]
-      },
-      {
-        "name": "Meditite",
-        "species": "Meditite",
-        "isBattling": "false",
-        "id": 307,
-        "moves": [
-          {
-            "name": "force palm"
-          },
-          {
-            "name": "feint",
-            "type": "normal"
-          },
-          {
-            "name": "confusion",
-            "type": "psychic"
-          },
-          {
-            "name": "hidden power"
-          }
-        ],
-        "types": [
-          {
-            "name": "fighting",
-            "double_damage_from": [
-              "flying",
-              "psychic",
-              "fairy"
-            ],
-            "double_damage_to": [
-              "normal",
-              "rock",
-              "steel",
-              "ice",
-              "dark"
-            ],
-            "half_damage_from": [
-              "rock",
-              "bug",
-              "dark"
-            ],
-            "half_damage_to": [
-              "flying",
-              "poison",
-              "bug",
-              "psychic",
-              "fairy"
-            ],
-            "no_damage_from": [],
-            "no_damage_to": [
-              "ghost"
-            ]
-          },
-          {
-            "name": "psychic",
-            "double_damage_from": [
-              "bug",
-              "ghost",
-              "dark"
-            ],
-            "double_damage_to": [
-              "fighting",
-              "poison"
-            ],
-            "half_damage_from": [
-              "fighting",
-              "psychic"
-            ],
-            "half_damage_to": [
-              "steel",
-              "psychic"
-            ],
-            "no_damage_from": [],
-            "no_damage_to": [
-              "dark"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Chimecho",
-        "species": "Chimecho",
-        "isBattling": "false",
-        "id": 358,
-        "moves": [
-          {
-            "name": "take down"
-          },
-          {
-            "name": "growl",
-            "type": "normal"
-          },
-          {
-            "name": "astonish",
-            "type": "ghost"
-          },
-          {
-            "name": "confusion",
-            "type": "psychic"
-          }
-        ],
-        "types": [
-          {
-            "name": "psychic",
-            "double_damage_from": [
-              "bug",
-              "ghost",
-              "dark"
-            ],
-            "double_damage_to": [
-              "fighting",
-              "poison"
-            ],
-            "half_damage_from": [
-              "fighting",
-              "psychic"
-            ],
-            "half_damage_to": [
-              "steel",
-              "psychic"
-            ],
-            "no_damage_from": [],
-            "no_damage_to": [
-              "dark"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Lapras",
-        "species": "Lapras",
-        "isBattling": "false",
-        "id": 131,
-        "moves": [
-          {
-            "name": "sing",
-            "type": "normal"
-          },
-          {
-            "name": "ice shard"
-          },
-          {
-            "name": "water pulse"
-          },
-          {
-            "name": "body slam"
-          }
-        ],
-        "types": [
-          {
-            "name": "water",
-            "double_damage_from": [
-              "grass",
-              "electric"
-            ],
-            "double_damage_to": [
-              "ground",
-              "rock",
-              "fire"
-            ],
-            "half_damage_from": [
-              "steel",
-              "fire",
-              "water",
-              "ice"
-            ],
-            "half_damage_to": [
-              "water",
-              "grass",
-              "dragon"
-            ],
-            "no_damage_from": [],
-            "no_damage_to": []
-          },
-          {
-            "name": "ice",
-            "double_damage_from": [
-              "fighting",
-              "rock",
-              "steel",
-              "fire"
-            ],
-            "double_damage_to": [
-              "flying",
-              "ground",
-              "grass",
-              "dragon"
-            ],
-            "half_damage_from": [
-              "ice"
-            ],
-            "half_damage_to": [
-              "steel",
-              "fire",
-              "water",
-              "ice"
-            ],
-            "no_damage_from": [],
-            "no_damage_to": []
-          }
-        ]
-      },
-      {
         "name": "Skarmory",
         "species": "Skarmory",
         "isBattling": "false",
         "id": 227,
         "moves": [
           {
-            "name": "peck",
+            "name": "icy-wind",
+            "type": "ice"
+          },
+          {
+            "name": "brave-bird",
             "type": "flying"
           },
           {
-            "name": "sand attack"
+            "name": "stealth-rock",
+            "type": "rock"
           },
           {
-            "name": "metal claw"
-          },
-          {
-            "name": "air cutter"
+            "name": "toxic",
+            "type": "poison"
           }
         ],
         "types": [
@@ -365,10 +87,418 @@
             ],
             "no_damage_to": []
           }
-        ]
+        ],
+        "base": {
+          "HP": 65,
+          "Attack": 80,
+          "Defense": 140,
+          "Sp. Attack": 40,
+          "Sp. Defense": 70,
+          "Speed": 70
+        }
+      },
+      {
+        "name": "Blastoise",
+        "species": "Blastoise",
+        "isBattling": "false",
+        "id": 9,
+        "moves": [
+          {
+            "name": "flip-turn",
+            "type": "water"
+          },
+          {
+            "name": "bite",
+            "type": "dark"
+          },
+          {
+            "name": "water-spout",
+            "type": "water"
+          },
+          {
+            "name": "ice-punch",
+            "type": "ice"
+          }
+        ],
+        "types": [
+          {
+            "name": "water",
+            "double_damage_from": [
+              "grass",
+              "electric"
+            ],
+            "double_damage_to": [
+              "ground",
+              "rock",
+              "fire"
+            ],
+            "half_damage_from": [
+              "steel",
+              "fire",
+              "water",
+              "ice"
+            ],
+            "half_damage_to": [
+              "water",
+              "grass",
+              "dragon"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": []
+          }
+        ],
+        "base": {
+          "HP": 79,
+          "Attack": 83,
+          "Defense": 100,
+          "Sp. Attack": 85,
+          "Sp. Defense": 105,
+          "Speed": 78
+        }
+      },
+      {
+        "name": "Heracross",
+        "species": "Heracross",
+        "isBattling": "false",
+        "id": 214,
+        "moves": [
+          {
+            "name": "knock-off",
+            "type": "dark"
+          },
+          {
+            "name": "close-combat",
+            "type": "fighting"
+          },
+          {
+            "name": "pin-missile",
+            "type": "bug"
+          },
+          {
+            "name": "brick-break",
+            "type": "fighting"
+          }
+        ],
+        "types": [
+          {
+            "name": "bug",
+            "double_damage_from": [
+              "flying",
+              "rock",
+              "fire"
+            ],
+            "double_damage_to": [
+              "grass",
+              "psychic",
+              "dark"
+            ],
+            "half_damage_from": [
+              "fighting",
+              "ground",
+              "grass"
+            ],
+            "half_damage_to": [
+              "fighting",
+              "flying",
+              "poison",
+              "ghost",
+              "steel",
+              "fire",
+              "fairy"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": []
+          },
+          {
+            "name": "fighting",
+            "double_damage_from": [
+              "flying",
+              "psychic",
+              "fairy"
+            ],
+            "double_damage_to": [
+              "normal",
+              "rock",
+              "steel",
+              "ice",
+              "dark"
+            ],
+            "half_damage_from": [
+              "rock",
+              "bug",
+              "dark"
+            ],
+            "half_damage_to": [
+              "flying",
+              "poison",
+              "bug",
+              "psychic",
+              "fairy"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": [
+              "ghost"
+            ]
+          }
+        ],
+        "base": {
+          "HP": 80,
+          "Attack": 125,
+          "Defense": 75,
+          "Sp. Attack": 40,
+          "Sp. Defense": 95,
+          "Speed": 85
+        }
+      },
+      {
+        "name": "Rotom",
+        "species": "Rotom Mow",
+        "isBattling": "false",
+        "id": 479,
+        "moves": [
+          {
+            "name": "thunderbolt",
+            "type": "electric"
+          },
+          {
+            "name": "volt-switch",
+            "type": "electric"
+          },
+          {
+            "name": "leaf-storm",
+            "type": "grass"
+          },
+          {
+            "name": "ominous-wind",
+            "type": "ghost"
+          }
+        ],
+        "types": [
+          {
+            "name": "electric",
+            "double_damage_from": [
+              "ground"
+            ],
+            "double_damage_to": [
+              "flying",
+              "water"
+            ],
+            "half_damage_from": [
+              "flying",
+              "steel",
+              "electric"
+            ],
+            "half_damage_to": [
+              "grass",
+              "electric",
+              "dragon"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": [
+              "ground"
+            ]
+          },
+          {
+            "name": "grass",
+            "double_damage_from": [
+              "flying",
+              "poison",
+              "bug",
+              "fire",
+              "ice"
+            ],
+            "double_damage_to": [
+              "ground",
+              "rock",
+              "water"
+            ],
+            "half_damage_from": [
+              "ground",
+              "water",
+              "grass",
+              "electric"
+            ],
+            "half_damage_to": [
+              "flying",
+              "poison",
+              "bug",
+              "steel",
+              "fire",
+              "grass",
+              "dragon"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": []
+          }
+        ],
+        "base": {
+          "HP": 50,
+          "Attack": 65,
+          "Defense": 107,
+          "Sp. Attack": 105,
+          "Sp. Defense": 107,
+          "Speed": 86
+        }
+      },
+      {
+        "name": "Forretress",
+        "species": "Forretress",
+        "isBattling": "false",
+        "id": 205,
+        "moves": [
+          {
+            "name": "giga-drain",
+            "type": "grass"
+          },
+          {
+            "name": "toxic-spikes",
+            "type": "poison"
+          },
+          {
+            "name": "earthquake",
+            "type": "ground"
+          },
+          {
+            "name": "gyro-ball",
+            "type": "steel"
+          }
+        ],
+        "types": [
+          {
+            "name": "bug",
+            "double_damage_from": [
+              "flying",
+              "rock",
+              "fire"
+            ],
+            "double_damage_to": [
+              "grass",
+              "psychic",
+              "dark"
+            ],
+            "half_damage_from": [
+              "fighting",
+              "ground",
+              "grass"
+            ],
+            "half_damage_to": [
+              "fighting",
+              "flying",
+              "poison",
+              "ghost",
+              "steel",
+              "fire",
+              "fairy"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": []
+          },
+          {
+            "name": "steel",
+            "double_damage_from": [
+              "fighting",
+              "ground",
+              "fire"
+            ],
+            "double_damage_to": [
+              "rock",
+              "ice",
+              "fairy"
+            ],
+            "half_damage_from": [
+              "normal",
+              "flying",
+              "rock",
+              "bug",
+              "steel",
+              "grass",
+              "psychic",
+              "ice",
+              "dragon",
+              "fairy"
+            ],
+            "half_damage_to": [
+              "steel",
+              "fire",
+              "water",
+              "electric"
+            ],
+            "no_damage_from": [
+              "poison"
+            ],
+            "no_damage_to": []
+          }
+        ],
+        "base": {
+          "HP": 75,
+          "Attack": 90,
+          "Defense": 140,
+          "Sp. Attack": 60,
+          "Sp. Defense": 60,
+          "Speed": 40
+        }
+      },
+      {
+        "name": "Staryul",
+        "species": "Staryu",
+        "isBattling": "false",
+        "id": 120,
+        "moves": [
+          {
+            "name": "psychic",
+            "type": "psychic"
+          },
+          {
+            "name": "light-screen",
+            "type": "psychic"
+          },
+          {
+            "name": "cosmic-power",
+            "type": "psychic"
+          },
+          {
+            "name": "hydro-pump",
+            "type": "water"
+          }
+        ],
+        "types": [
+          {
+            "name": "water",
+            "double_damage_from": [
+              "grass",
+              "electric"
+            ],
+            "double_damage_to": [
+              "ground",
+              "rock",
+              "fire"
+            ],
+            "half_damage_from": [
+              "steel",
+              "fire",
+              "water",
+              "ice"
+            ],
+            "half_damage_to": [
+              "water",
+              "grass",
+              "dragon"
+            ],
+            "no_damage_from": [],
+            "no_damage_to": []
+          }
+        ],
+        "base": {
+          "HP": 30,
+          "Attack": 45,
+          "Defense": 55,
+          "Sp. Attack": 70,
+          "Sp. Defense": 55,
+          "Speed": 85
+        }
       }
     ],
-    "battling": ""
+    "battling": "IFGHI"
   },
   "opp": {
     "party": [],

@@ -16,8 +16,8 @@ module.exports = {
     const connectedSockets = new Set()
 
     connectedSockets.broadcast = function (data, except) {
-      console.log("(～￣▽￣)～ Update sent to browser")
       for (let sock of this) {
+        console.log("(～￣▽￣)～ Update sent to browser")
         if (sock !== except) {
           sock.send(data)
         }

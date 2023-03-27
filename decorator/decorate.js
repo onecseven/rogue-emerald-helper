@@ -30,7 +30,7 @@ const fallback_info = (battling) => {
 }
 
 function convert_move(str) {
-  return str.replace("_", " ").toLowerCase()
+  return str.replace("_", "-").toLowerCase()
 }
 
 function isEmpty(obj) {
@@ -47,16 +47,20 @@ const inject_data = (dispatch) => (data) => {
       party: guy.party
         .filter((poke) => !isEmpty(poke))
         .map((poke) => {
+          if (poke.id > 1000) poke.id = poke.id - 231 //rotom hack
           let computedTypes = pokedex[poke.id]?.type.map((type) => {
             return { name: type.toLowerCase(), ...types[type.toLowerCase()] }
           })
 
           return {
             ...poke,
+            id: poke.name === "Rotom" ? 479 : poke.id, //rotom hack
+            species: pokedex[poke.id]?.name,
             moves: poke.moves.map(convert_move).map((move) => {
               return { name: move, type: move_type[move] }
             }),
             types: computedTypes,
+            base: pokedex[poke.id]?.base
           }
         }),
     }

@@ -770,12 +770,12 @@ end
 function write_and_send()
     cached_party = get_trainer_party()
     cached_opp = get_opps()
-    local partyfile = assert(io.open(ROM_PATH .."pokes.json", "wb"), "lol")
-    partyfile:write(cached_party)
-    partyfile:write(cached_opp)
-    partyfile:close()
+    -- local partyfile = assert(io.open(ROM_PATH .."pokes.json", "wb"), "lol")
+    -- partyfile:write(cached_party)
+    -- partyfile:write(cached_opp)
+    -- partyfile:close()
     ST_send(cached_party..cached_opp)
-    console:log("Wrote & Sent Data.")
+    console:log("Sent Data.")
     frame_counter = 0
     return true
 end
