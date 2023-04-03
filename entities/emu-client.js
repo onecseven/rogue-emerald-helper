@@ -17,7 +17,7 @@ let start = (dispatch) => {
   emuClient.setKeepAlive(true, 500)
 
   let waitTime = 1000
-  let onConnect = () => console.log("ψ(｀∇´)ψ Connected to mGBA.")
+  let onConnect = () => console.log("ψ(｀∇´)ψ Connected to mGBA")
   let onReady = () => {
     console.log("o((>ω< ))o Asking for initial update.")
     dispatch(events.EMU_CONNECTED)
