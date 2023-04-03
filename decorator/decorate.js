@@ -16,9 +16,9 @@ try {
 const OUTPUT_PATH = creds?.["DECORATED_OUTPUT_PATH"] ?? "."
 
 const fallback_info = (battling) => {
-  if (!reverse_dex.hasOwnProperty(battling)) return battling
+  if (!reverse_dex.hasOwnProperty(battling)) return null
   let id = reverse_dex[battling]
-  if (!pokedex.hasOwnProperty(id)) return battling
+  if (!pokedex.hasOwnProperty(id)) return null
   let dexed = {
     ...pokedex[id],
     species: pokedex[id]?.name,
