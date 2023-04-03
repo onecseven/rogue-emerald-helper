@@ -14,14 +14,18 @@ module.exports = {
 
     const wss = new WebSocket.Server({ server })
     const connectedSockets = new Set()
-
+    let lastUpdate = ""
     connectedSockets.broadcast = function (data, except) {
+      let stringified_data = JSON.stringify(data) || ""
+      if (stringified_data === lastUpdate) return console.log("（︶^︶）Ignored redundant update")
+      else lastUpdate = stringified_data
       for (let sock of this) {
-        console.log("(～￣▽￣)～ Update sent to browser")
         if (sock !== except) {
           sock.send(data)
         }
       }
+      if (this.size) console.log("(～￣▽￣)～ Update sent to browser")
+
     }
 
     wss.on("connection", (ws) => {
