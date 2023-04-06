@@ -4,7 +4,7 @@ const app = express()
 const WebSocket = require("ws")
 const events = require("../events.js")
 const console = require("./console.js")
-app.use("/", express.static("./client/_site"))
+app.use("/", express.static("./dist"))
 const server = app.listen(6969, () =>
 console.log("(∩^o^)⊃━☆ Helper running on http://localhost:6969 !")
 )
@@ -16,16 +16,24 @@ module.exports = {
     const connectedSockets = new Set()
     let lastUpdate = ""
     connectedSockets.broadcast = function (data, except) {
-      let stringified_data = JSON.stringify(data) || ""
-      if (stringified_data === lastUpdate) return console.log("（︶^︶）Ignored redundant update")
-      else lastUpdate = stringified_data
+      if (!this.size) return console.log("╚(•⌂•)╝ I have an update but no browser is connected!")
+      let stringified_data = JSON.stringify(data) 
+      if (stringified_data === lastUpdate && lastUpdate !== "") return console.log("（︶^︶）Ignored redundant update")
       for (let sock of this) {
         if (sock !== except) {
           sock.send(data)
         }
       }
+      lastUpdate = stringified_data
       if (this.size) console.log("(～￣▽￣)～ Update sent to browser")
+    }
 
+    connectedSockets.error = function () {
+      lastUpdate = ""
+      for (let sock of this) {
+          sock.send("no gba found")
+      }
+      console.log("(ಥ _ ಥ) Told the browser we can't find the emulator")
     }
 
     wss.on("connection", (ws) => {
@@ -35,6 +43,7 @@ module.exports = {
 
 
       ws.on("close", (ws) => {
+        lastUpdate = ""
         connectedSockets.delete(ws)
         console.log("o(*￣▽￣*)ブ Goodbye gay Browser!")
       })

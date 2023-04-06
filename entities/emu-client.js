@@ -17,6 +17,7 @@ let start = (dispatch) => {
   emuClient.setKeepAlive(true, 500)
 
   let waitTime = 1000
+  let connect = () => emuClient.connect(port, host)
   let onConnect = () => console.log("ψ(｀∇´)ψ Connected to mGBA")
   let onReady = () => {
     console.log("o((>ω< ))o Asking for initial update.")
@@ -24,24 +25,28 @@ let start = (dispatch) => {
     emuClient.write("update")
   }
   let onData = (chunk) => {
-    console.log(`(*￣3￣)╭ Data received from mGBA.`)
+    console.log(`(*￣3￣)╭ Data received from mGBA`)
     let data = chunk.toString()
     dispatch(events.EMU_DATA, JSON.parse(data))
   }
   let onEnd = () => {
-    console.log("(˘･_･˘) Connection to mGBA ended.")
+    console.log("(˘･_･˘) Connection to mGBA ended")
     dispatch(events.MISSING_EMU)
-    setTimeout(() => emuClient.connect(connectOps, onConnect), waitTime)
+    setTimeout(connect, waitTime)
   }
   let onError = (err) => {
     if (err) {
-      console.log(`(#｀-_ゝ-) There's been an error, trying again in ${waitTime / 1000}s`)
+      console.log(
+        `(#｀-_ゝ-) No emulator found, trying again in ${waitTime / 1000}s`
+      )
+      console.log("(◑﹏◐) Is the emulator running emu-watcher.lua?")
+      dispatch(events.MISSING_EMU)
       if (waitTime < 10000) waitTime = waitTime * 10
     }
-    setTimeout(() => emuClient.connect(connectOps, onConnect), waitTime)
+    setTimeout(connect, waitTime)
   }
-  
-  emuClient.connect(connectOps, onConnect)
+
+  emuClient.on("connect", onConnect)
 
   emuClient.on("ready", onReady)
 
@@ -51,6 +56,7 @@ let start = (dispatch) => {
 
   emuClient.on("error", onError)
 
+  connect()
   return emuClient
 }
 // entity.start = () => writable/broadcast
