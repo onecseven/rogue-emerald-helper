@@ -10,11 +10,12 @@ const sharedState = {
   connected_to_emu: false,
 }
 
-subscribe(events.WEB_REQUESTS_UPDATE, () => sharedState.connected_to_emu ? emu.write("update") : null) //TODO if it's not connected, maybe try the last written thing in ./data
+
+subscribe(events.WEB_REQUESTS_UPDATE, () => sharedState.connected_to_emu ? emu.write("update") : web.error())
 subscribe(events.EMU_CONNECTED, () => sharedState.connected_to_emu = true)
 subscribe(events.LATEST_UPDATE, (data) =>  (web.broadcast(JSON.stringify(data, null, 2))))
 subscribe(events.EMU_DATA, decorate)
-subscribe(events.MISSING_EMU, () => (sharedState.connected_to_emu = false))
+subscribe(events.MISSING_EMU, () => (sharedState.connected_to_emu = false, web.error()))
 
 /**
  * only fools follow this path 
