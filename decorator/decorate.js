@@ -21,6 +21,7 @@ const fallback_info = (battling) => {
   if (!pokedex.hasOwnProperty(id)) return null
   let dexed = {
     ...pokedex[id],
+    moves: [],
     species: pokedex[id]?.name,
     types: pokedex[id]?.type.map((type) => {
       return { name: type.toLowerCase(), ...types[type.toLowerCase()] }
@@ -70,6 +71,7 @@ const inject_data = (dispatch) => (data) => {
     }
   })
   let results = { trainer: decorated[0], opp: decorated[1] }
+  if (results.trainer.battling && results.trainer.party.length === 0) results.trainer.party.push(results.trainer.battling)
   console.log(`o(〃＾▽＾〃)o Extra Data Injected`)
   dispatch(events.LATEST_UPDATE, results)
   to_disk(results)
