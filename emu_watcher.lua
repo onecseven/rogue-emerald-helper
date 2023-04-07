@@ -1,8 +1,3 @@
--- ONLY MODIFY THIS SECTION
--- REPLACE $ROM_FOLDER WITH THE FOLDER YOUR ROM IS IN
-
-ROM_PATH = "D:/roms/gba/Script/"
-
 -- DO NOT LOOK FURTHER BEYOND MORTAL
 
 
@@ -31,8 +26,6 @@ ROM_PATH = "D:/roms/gba/Script/"
 
 
 
-
-console:log("If " .. ROM_PATH .. " is not the path to your game's folder, then you must write the correct path in emu_watcher.lua.")
 
 local GameCharMap = {
     [0x00] = '',
@@ -533,14 +526,6 @@ function decode_battling(start)
 	end
 	return nickname
 end
-
--- for i = 0, 6, 1 do
--- 	decode(pstats[i])
--- 	-- local charByte = emu:read8(start + 8 + i)
--- 	-- if charByte ~= 0xFF then -- end of sequence
--- 			-- nickname = nickname .. (GameCharMap[charByte])
--- 	-- end
--- end
 
 function get_battling_player()
 	return decode_battling(BATTLING_PLAYER)
