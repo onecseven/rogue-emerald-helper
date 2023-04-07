@@ -28,7 +28,12 @@ const fallback_info = (battling) => {
   }
   return dexed
 }
-function convert_move(str) {
+
+function search_format(str) {
+  return str.replaceAll("_", "-").toLowerCase()
+}
+
+function output_format(str) {
   return str.split("_").map((word) => word[0] + word.substring(1).toLowerCase()).join(" ")
 }
 
@@ -55,8 +60,8 @@ const inject_data = (dispatch) => (data) => {
             ...poke,
             id: poke.name === "Rotom" ? 479 : poke.id, //rotom hack
             species: pokedex[poke.id]?.name,
-            moves: poke.moves.map(convert_move).map((move) => {
-              return { name: move, type: move_type[move] }
+            moves: poke.moves.map((move) => {
+              return { name: output_format(move), type: move_type[search_format(move)] }
             }),
             types: computedTypes,
             base: pokedex[poke.id]?.base,
