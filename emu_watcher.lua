@@ -535,8 +535,6 @@ function get_battling_opponent()
 	return decode_battling(BATTLING_OPP)
 end
 
-
-
 function decode(start, battling)
 	personality = emu:read32(start)
 	trainerid = emu:read32(start + 4)

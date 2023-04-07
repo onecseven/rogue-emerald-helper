@@ -28,9 +28,8 @@ const fallback_info = (battling) => {
   }
   return dexed
 }
-
 function convert_move(str) {
-  return str.replace("_", "-").toLowerCase()
+  return str.split("_").map((word) => word[0] + word.substring(1).toLowerCase()).join(" ")
 }
 
 function isEmpty(obj) {
@@ -60,12 +59,12 @@ const inject_data = (dispatch) => (data) => {
               return { name: move, type: move_type[move] }
             }),
             types: computedTypes,
-            base: pokedex[poke.id]?.base
+            base: pokedex[poke.id]?.base,
           }
         }),
     }
   })
-  let results =  { trainer: decorated[0], opp: decorated[1] }
+  let results = { trainer: decorated[0], opp: decorated[1] }
   console.log(`o(〃＾▽＾〃)o Extra Data Injected`)
   dispatch(events.LATEST_UPDATE, results)
   to_disk(results)
